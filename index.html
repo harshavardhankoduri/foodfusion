@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+
+  <title>Food Fusion</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i> Food Fusion
+      </div>
+      <div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger"><i class="fas fa-bars"></i></label>
+
+        <div class="links">
+          <a href="./index.html">HOME</a>
+          <a href="./about.html">ABOUT</a>
+          <a href="./service.html">SERVICE</a>
+          <a href="./menu.html">MENU</a>
+
+          <div class="dropdown">
+            <label for="pages-toggle" class="dropbtn">PAGES▾</label>
+            <div class="dropdown-content">
+              <a href="./booking.html">Booking</a>
+              <a href="./ourteam.html">Our Team</a>
+              <a href="./testimonial.html">Testimonial</a>
+            </div>
+          </div>
+
+          <a href="./contact.html">CONTACT</a>
+          <a href="#bookatable" class="btn-cta">BOOK A TABLE</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="text-block">
+          <h1>Enjoy Our<br />Delicious Meal</h1>
+          <p>Experience the best culinary delights crafted by our master chefs. Join us for an unforgettable dining
+            experience.</p>
+          <p>From appetizers to desserts, we have something for everyone. Book your table now and indulge in a feast
+            of flavors.</p>
+          <a href="#bookatable" class="hero-btn">BOOK A TABLE</a>
+        </div>
+        <div class="image-block">
+          <img src="./hero.png" alt="Delicious food" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about">
+      <div class="about-inner">
+        <div class="images-grid">
+          <div class="img-wrap img1">
+            <img src="./about.jpeg" alt="Large Top Left" loading="lazy" />
+          </div>
+          <div class="img-wrap img2">
+            <img src="./about1.jpeg" alt="Medium Top Right" loading="lazy" />
+          </div>
+          <div class="img-wrap img3">
+            <img src="./about-3.jpg" alt="Medium Bottom Left" loading="lazy" />
+          </div>
+          <div class="img-wrap img4">
+            <img src="./about-4.jpg" alt="Large Bottom Right" loading="lazy" />
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="subtitle">About Us <span class="line"></span></div>
+          <h2>Welcome to <span class="highlight"><i class="fa-solid fa-utensils"></i> Food Fusion</span></h2>
+          <p>At Food Fusion, we believe in creating unforgettable dining experiences. Our team of master chefs
+            meticulously crafts each dish using the finest ingredients, ensuring that every bite is a delight to your
+            taste buds.</p>
+          <p>Whether you're here for a casual meal or a special occasion, our warm and inviting atmosphere will make
+            you feel right at home. Join us and discover a world of flavors that will tantalize your palate and leave you
+            craving for more.</p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-card">
+                <div class="number" data-target="15">15</div>
+                <div class="info">
+                  <div class="label">Years of</div>
+                  <div class="title">EXPERIENCE</div>
+                </div>
+              </div>
+            </div>
+            <div class="stat">
+              <div class="stat-card">
+                <div class="number" data-target="50">50</div>
+                <div class="info">
+                  <div class="label">Popular</div>
+                  <div class="title">MASTER CHEFS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="./about.html" class="read-more">READ MORE</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="feature-cards">
+        <div class="card">
+          <h5>Master Chefs</h5>
+          <p>Our chefs are experts in their craft, bringing years of experience and passion to every dish they create.</p>
+        </div>
+        <div class="card">
+          <h5>Quality Food</h5>
+          <p>We use only the freshest ingredients to prepare our dishes, ensuring quality and taste in every bite.</p>
+        </div>
+        <div class="card">
+          <h5>Online Order</h5>
+          <p>Order your favorite dishes online and enjoy the convenience of home delivery.</p>
+        </div>
+        <div class="card">
+          <h5>24/7 Service</h5>
+          <p>Our chefs are available round the clock to serve you the best culinary delights.</p>
+      </div>
+    </section>
+    <!-----food menu----->
+    <section class="menu-section">
+      <div class="menu-container">
+        <div class="menu-heading">
+          <h5><i class="fas fa-book-open"></i> Food Menu</h5>
+          <h2><i class="fas fa-star"></i> Most Popular Items</h2>
+          <div class="menu-tabs">
+            <a class="tab-btn active" href="#menu"><i class="fas fa-mug-hot"></i> Popular <strong>Breakfast</strong></a>
+            <a class="tab-btn" href="#menu"><i class="fas fa-hamburger"></i> Special <strong>Lunch</strong></a>
+            <a class="tab-btn" href="#menu"><i class="fas fa-drumstick-bite"></i> Lovely <strong>Dinner</strong></a>
+          </div>
+
+          <div class="menu-grid" id="menu">
+            <!-- MENU ITEM -->
+            <div class="menu-item">
+              <img src="./menu-1.jpg" alt="Chicken Burger">
+              <div class="menu-content">
+                <h4><i class="fas fa-hamburger"></i> Chicken Burger</h4>
+                <p>Juicy grilled chicken with fresh lettuce, tomatoes, and our special sauce.</p>
+              </div>
+              <span class="price">₹115</span>
+            </div>
+
+            <div class="menu-item">
+              <img src="./menu-2.jpg" alt="Beef Steak">
+              <div class="menu-content">
+                <h4><i class="fas fa-drumstick-bite"></i> Beef Steak</h4>
+                <p>Perfectly cooked beef steak served with mashed potatoes and seasonal vegetables.</p>
+              </div>
+              <span class="price">₹140</span>
+            </div>
+
+            <div class="menu-item">
+              <img src="./menu-3.jpg" alt="Margherita Pizza">
+              <div class="menu-content">
+                <h4><i class="fas fa-pizza-slice"></i> Margherita Pizza</h4>
+                <p>Classic pizza topped with fresh mozzarella, basil, and a drizzle of olive oil.</p>
+              </div>
+              <span class="price">₹95</span>
+            </div>
+
+            <div class="menu-item">
+              <img src="./menu-4.jpg" alt="Pasta Alfredo">
+              <div class="menu-content">
+                <h4><i class="fas fa-bowl-rice"></i> Pasta Alfredo</h4>
+                <p>Creamy Alfredo sauce with fettuccine pasta, topped with grated Parmesan cheese.</p>
+              </div>
+              <span class="price">₹125</span>
+            </div>
+
+            <div class="menu-item">
+              <img src="./menu-5.jpg" alt="Grilled Sandwich">
+              <div class="menu-content">
+                <h4><i class="fas fa-bread-slice"></i> Grilled Sandwich</h4>
+                <p>Toasted sandwich with a choice of fillings, served with a side of fries.</p>
+              </div>
+              <span class="price">₹80</span>
+            </div>
+            <div class="menu-item">
+              <img src="./menu-6.jpg" alt="Fried Rice">
+              <div class="menu-content">
+                <h4><i class="fas fa-seedling"></i> Fried Rice</h4>
+                <p>Stir-fried rice with vegetables, eggs, and a choice of chicken or shrimp.</p>
+              </div>
+              <span class="price">₹90</span>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+
+    <section class="reservation-section" id="bookatable">
+      <div class="reservation-container">
+        <div class="reservation-image">
+          <iframe src="https://www.youtube.com/embed/xPPLbEFbCAo" frameborder="0" allowfullscreen
+            style="position: absolute; top:0; left:0; width:100%; height:100%; ">
+          </iframe>
+
+        </div>
+        <div class="reservation-form-box">
+          <h5 class="reservation-subtitle">Reservation</h5>
+          <h2 class="reservation-title">Book A Table Online</h2>
+          <form class="reservation-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="datetime-local" placeholder="Date & Time" required />
+            <select>
+              <option>People 1</option>
+              <option>People 2</option>
+              <option>People 3</option>
+              <option>People 4</option>
+            </select>
+            <textarea placeholder="Special Request"></textarea>
+            <button type="submit">BOOK NOW</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="chefs-section">
+      <h5>Team Members</h5>
+      <h2>Our Master Chefs</h2>
+      <div class="chef-grid">
+        <!-- Chef 1 -->
+        <div class="chef-card">
+          <img src="./team-1.jpg" alt="Chef">
+          <h4>Gordon Bennett</h4>
+          <p>Executive Chef</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Chef 2 -->
+        <div class="chef-card">
+          <img src="./team-2.jpg" alt="Chef">
+          <h4>Maria Alvarez</h4>
+          <p>Pastry Chef</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Chef 3 -->
+        <div class="chef-card">
+          <img src="./team-3.jpg" alt="Chef">
+          <h4>Kenji Tanaka</h4>
+          <p>Sous Chef</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Chef 4 -->
+        <div class="chef-card">
+          <img src="./team-4.jpg" alt="Chef">
+          <h4>Olivia Hartfield</h4>
+          <p>Chef de Partie</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----TESTIMONAL------>
+
+    <section class="testimonial-section">
+      <div class="testimonial-heading">
+        <h4>Testimonial</h4>
+        <h2>Our Clients Say!!!</h2>
+      </div>
+
+      <div class="testimonial-wrapper">
+        <div class="testimonial-slider">
+          <div class="testimonial-card">
+            <p><i class="quote">“</i> Great experience, delicious food and amazing ambiance. Highly recommended!</p>
+            <div class="client">
+              <img src="icon1.jpg" alt="Client 1">
+              <div>
+                <h3>rakul preeth</h3>
+                <p>Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p><i class="quote">“</i> Absolutely loved the desserts. Service was top-notch too!</p>
+            <div class="client">
+              <img src="icon2.webp" alt="Client 2">
+              <div>
+                <h3>Allu Arjun</h3>
+                <p>Designer</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p><i class="quote">“</i> The pasta was fresh and delicious. Will definitely come again.</p>
+            <div class="client">
+              <img src="icon3.jpg" alt="Client 3">
+              <div>
+                <h3>Ram Charan</h3>
+                <p>Photographer</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p><i class="quote">“</i> A perfect place for a family dinner. Cozy and classy.</p>
+            <div class="client">
+              <img src="icon4.jpg" alt="Client 4">
+              <div>
+                <h3>pooja</h3>
+                <p>Teacher</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p><i class="quote">“</i> Mouthwatering dishes and quick service. Kudos to the chefs!</p>
+            <div class="client">
+              <img src="icon5.jpg" alt="Client 5">
+              <div>
+                <h3>Roshan</h3>
+                <p>Developer</p>
+              </div>
+            </div>
+          </div>
+          <!-- Cloned for loop effect -->
+          <div class="testimonial-card">
+            <p><i class="quote">“</i> Great experience, delicious food and amazing ambiance. Highly recommended!</p>
+            <div class="client">
+              <img src="icon1.jpg" alt="Client 1">
+              <div>
+                <h3>rakul</h3>
+                <p>Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p><i class="quote">“</i> Absolutely loved the desserts. Service was top-notch too!</p>
+            <div class="client">
+              <img src="icon2.webp" alt="Client 2">
+              <div>
+                <h3>Allu Arjun</h3>
+                <p>Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-dots">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <!-----Footer ------>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+          <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i> Food Fusion</h2>
+          <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+        </div>
+        <!-- Text Link Buttons -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul class="footer-buttons">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./booking.html">Booking</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p><i class="fa fa-map-marker-alt"></i> 123 Food Street, Taste City</p>
+          <p><i class="fa fa-phone-alt"></i> +91 9000189800</p>
+          <p><i class="fa fa-envelope"></i> info@foodfusion.com</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <!-- Opening Hours -->
+        <div class="footer-hours">
+          <h3>Opening Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+          <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+        </div>
+        <!-- Newsletter Subscription -->
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for the latest updates and offers.</p>
+          <form action="#" method="post">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit"><i class="fa fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+      </div>
+    </footer>
+    </section>
+  </header>
+</body>

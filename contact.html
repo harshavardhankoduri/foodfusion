@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Food Fusion</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url('food.jpg') no-repeat center center/cover;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .nav-content {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px 4.3%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      color: orangered;
+      font-size: 28px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 150px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar-overlay {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      width: 100%;
+    }
+
+    .navbar-overlay h1 {
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-overlay p {
+      color: orange;
+      font-size: 18px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-overlay>p:hover {
+      color: orangered;
+    }
+
+    .contact-container {
+      padding: 60px 10%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .contact-container h2 {
+      color: orange;
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .contact-container>p {
+      font-size: 32px;
+      font-weight: bold;
+      color: #0f172b;
+      margin-bottom: 40px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-info-item {
+      text-align: center;
+    }
+
+    .contact-info-item h3 {
+      color: orange;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .contact-info-item p {
+      color: #333;
+      font-size: 16px;
+    }
+
+    .contact-info-item i {
+      color: orange;
+      margin-right: 8px;
+    }
+
+    .contact-body {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+
+    iframe {
+      flex: 1 1 400px;
+      border: 0;
+      height: 420px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .contact-form {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn-submit {
+      padding: 12px;
+      background-color: orange;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: darkorange;
+    }
+
+    @media (max-width: 768px) {
+      .contact-body {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="brand">Food Fusion</span>
+      </div>
+      <div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+          <i class="fas fa-bars"></i>
+        </label>
+        <div class="links">
+          <a href="./index.html">HOME</a>
+          <a href="./about.html">ABOUT</a>
+          <a href="./service.html">SERVICE</a>
+          <a href="./menu.html">MENU</a>
+          <div class="dropdown">
+            <button class="dropbtn">PAGES ▾</button>
+            <div class="dropdown-content">
+              <a href="./booking.html">Booking</a>
+              <a href="./ourteam.html">Our Team</a>
+              <a href="./testimonial.html">Testimonial</a>
+            </div>
+          </div>
+          <a href="./contact.html">CONTACT</a>
+          <a href="./booking.html" class="btn-cta">BOOK A TABLE</a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-overlay">
+      <h1>Contact Us</h1>
+      <p>Home / Pages / Contact</p>
+    </div>
+  </nav>
+
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Contact For Any Query</p>
+    <div class="contact-info">
+      <div class="contact-info-item">
+        <h3>Booking</h3>
+        <p><i class="fas fa-envelope-open"></i> book@example.com</p>
+      </div>
+      <div class="contact-info-item">
+        <h3>General</h3>
+        <p><i class="fas fa-info-circle"></i> info@example.com</p>
+      </div>
+      <div class="contact-info-item">
+        <h3>Technical</h3>
+        <p><i class="fas fa-cogs"></i> tech@example.com</p>
+      </div>
+    </div>
+
+    <div class="contact-body">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60880.921254374414!2d78.85142995288474!3d17.504764659462598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb6f0595229ee7%3A0xf34c192cdd1cfe05!2sBhuvanagiri%2C%20Telangana!5e0!3m2!1sen!2sin!4v1754421231758!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <form action="#" method="post" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2 class="footer-logo"><i class="fa-solid fa-utensils"></i> Food Fusion</h2>
+        <p>Delicious meals crafted with love and care. Join us and enjoy the best dining experience.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul class="footer-buttons">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./booking.html">Booking</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fa fa-map-marker-alt"></i> 123 Food Street, Taste City</p>
+        <p><i class="fa fa-phone-alt"></i> +91 9000189800</p>
+        <p><i class="fa fa-envelope"></i> info@foodfusion.com</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-hours">
+        <h3>Opening Hours</h3>
+        <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+        <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+        <form action="#" method="post">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit"><i class="fa fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span>Food Fusion</span>. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
